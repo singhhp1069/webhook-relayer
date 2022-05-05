@@ -3,9 +3,9 @@ FROM golang:1.16-alpine
 
 WORKDIR /webhook
 
-COPY webhook/go.mod ./
-COPY webhook/go.sum ./
-COPY webhook/*.go ./
+COPY go.mod ./
+COPY go.sum ./
+COPY *.go ./
 
 RUN go mod download
 
